@@ -26,3 +26,4 @@ def test_upload_page_post_invalid(client):
 def test_404(client):
     response = client.get('/nonexistent')
     assert response.status_code == 404
+

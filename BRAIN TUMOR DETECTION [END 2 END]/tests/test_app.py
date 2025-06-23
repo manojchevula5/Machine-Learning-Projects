@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import io
 import pytest
 from app import app
@@ -26,4 +30,3 @@ def test_upload_page_post_invalid(client):
 def test_404(client):
     response = client.get('/nonexistent')
     assert response.status_code == 404
-
